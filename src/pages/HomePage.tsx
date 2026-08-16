@@ -35,28 +35,28 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen bg-content-50">
-      <header className="bg-white/90 backdrop-blur-md sticky top-0 z-50 border-b border-neutral-200/30 shadow-sm">
+      <header className="bg-bar-700 sticky top-0 z-50 border-b border-white/10 shadow-sm">
         <nav className="flex justify-between items-center w-full px-4 md:px-10 h-20 max-w-7xl mx-auto">
           <Link to="/" className="flex items-center gap-4">
-            <img src="/logo.png" alt="InnovaSalud" className="h-27 w-auto" />
-            {/* <span className="text-2xl font-bold text-bar-900">InnovaSalud</span> */}
+            <img src="/logo.png" alt="MediCenter" className="h-27 w-auto" />
+            {/* <span className="text-2xl font-bold text-bar-900">MediCenter</span> */}
           </Link>
           <div className="hidden md:flex items-center gap-8">
-            <Link to="/search" className="text-sm font-medium tracking-wide text-neutral-600 hover:text-bar-900 transition-colors">Verificar certificado</Link>
-            <Link to="/catalog" className="text-sm font-medium tracking-wide text-neutral-600 hover:text-bar-900 transition-colors">Catálogo</Link>
-            <Link to="/login" className="bg-bar-900 text-white px-6 py-2.5 rounded-full text-sm font-medium tracking-wide hover:opacity-90 transition-all scale-95 active:scale-90">
+            <Link to="/search" className="text-sm font-medium tracking-wide text-white hover:text-white/80 transition-colors">Verificar certificado</Link>
+            <Link to="/catalog" className="text-sm font-medium tracking-wide text-white hover:text-white/80 transition-colors">Catálogo</Link>
+            <Link to="/login" className="bg-accent-500 text-white px-6 py-2.5 rounded-full text-sm font-bold tracking-wide hover:bg-accent-600 transition-all scale-95 active:scale-90">
               Iniciar sesión
             </Link>
           </div>
-          <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="md:hidden text-bar-900">
+          <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="md:hidden text-white">
             <span className="material-symbols-outlined">{mobileMenuOpen ? 'close' : 'menu'}</span>
           </button>
         </nav>
         {mobileMenuOpen && (
-          <div className="md:hidden border-t border-neutral-200/30 bg-white px-4 py-6 space-y-4">
-            <Link to="/search" onClick={() => setMobileMenuOpen(false)} className="block text-sm font-medium text-neutral-600 hover:text-bar-900">Verificar certificado</Link>
-            <Link to="/catalog" onClick={() => setMobileMenuOpen(false)} className="block text-sm font-medium text-neutral-600 hover:text-bar-900">Catálogo</Link>
-            <Link to="/login" onClick={() => setMobileMenuOpen(false)} className="block text-center bg-bar-900 text-white px-6 py-2.5 rounded-full text-sm font-medium">Iniciar sesión</Link>
+          <div className="md:hidden border-t border-white/10 bg-bar-700 px-4 py-6 space-y-4">
+            <Link to="/search" onClick={() => setMobileMenuOpen(false)} className="block text-sm font-medium text-white hover:text-white/80">Verificar certificado</Link>
+            <Link to="/catalog" onClick={() => setMobileMenuOpen(false)} className="block text-sm font-medium text-white hover:text-white/80">Catálogo</Link>
+            <Link to="/login" onClick={() => setMobileMenuOpen(false)} className="block text-center bg-accent-500 text-white px-6 py-2.5 rounded-full text-sm font-bold">Iniciar sesión</Link>
           </div>
         )}
       </header>
@@ -65,16 +65,16 @@ export default function HomePage() {
         <section className="bg-gradient-to-br from-bar-900 to-bar-700 relative overflow-hidden py-20 lg:py-32">
           <div className="max-w-7xl mx-auto px-4 md:px-10 grid lg:grid-cols-2 gap-12 items-center relative z-10">
             <div className="text-left space-y-6">
-              <span className="inline-block px-4 py-1.5 rounded-full bg-bar-200/20 text-bar-200 text-xs font-semibold tracking-wider uppercase">Líder en Educación Médica</span>
+              <span className="inline-block px-4 py-1.5 rounded-full bg-white/10 text-white text-xs font-semibold tracking-wider uppercase">Líder en Educación Médica</span>
               <h1 className="text-3xl md:text-5xl font-bold text-white leading-tight md:leading-tight tracking-tight">Formación Virtual para el Sector Salud</h1>
               <p className="text-lg text-white/80 max-w-xl leading-relaxed text-justify">
                 Especialízate con los mejores programas de capacitación continua. Calidad académica, flexibilidad total y certificación inmediata.
               </p>
               <div className="flex flex-wrap gap-4 pt-4">
-                <Link to="/catalog" className="bg-bar-200 text-bar-900 px-8 py-4 rounded-xl text-xl font-bold hover:shadow-lg hover:-translate-y-0.5 transition-all">
+                <Link to="/catalog" className="bg-accent-500 text-bar-900 px-8 py-4 rounded-xl text-xl font-bold hover:bg-accent-600 hover:shadow-lg hover:-translate-y-0.5 transition-all">
                   Ver cursos
                 </Link>
-                <a href={`https://wa.me/${config.contactPhone.replace(/[^\d]/g, '')}`} target="_blank" rel="noopener noreferrer" className="border border-white/30 text-white px-8 py-4 rounded-xl text-xl font-semibold hover:bg-white/10 transition-all">
+                <a href={`https://wa.me/${config.contactPhone.replace(/[^\d]/g, '')}`} target="_blank" rel="noopener noreferrer" className="border-2 border-accent-500 text-white px-8 py-4 rounded-xl text-xl font-bold hover:bg-accent-500 hover:text-bar-900 transition-all">
                   Contáctanos
                 </a>
               </div>
@@ -130,7 +130,7 @@ export default function HomePage() {
                   href={`https://wa.me/${config.contactPhone.replace(/[^\d]/g, '')}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-3 bg-bar-800 text-white px-8 py-4 rounded-2xl hover:bg-bar-900 transition-all"
+                  className="inline-flex items-center gap-3 bg-accent-500 text-bar-900 px-8 py-4 rounded-2xl hover:bg-accent-600 transition-all"
                 >
                   <span className="material-symbols-outlined">chat</span>
                   Asesoría por WhatsApp
@@ -170,24 +170,24 @@ export default function HomePage() {
               <h3 className="text-2xl font-semibold text-bar-900 mb-4">Cursos Básicos</h3>
               <p className="text-base text-neutral-600 mb-6 text-justify">Fundamentos esenciales para el personal de apoyo y estudiantes en formación inicial.</p>
               <ul className="space-y-3 mb-8">
-                <li className="flex items-center gap-2 text-sm font-medium"><span className="material-symbols-outlined text-lg text-bar-200">check_circle</span> Primeros Auxilios</li>
-                <li className="flex items-center gap-2 text-sm font-medium"><span className="material-symbols-outlined text-lg text-bar-200">check_circle</span> Soporte vital básico</li>
-                <li className="flex items-center gap-2 text-sm font-medium"><span className="material-symbols-outlined text-lg text-bar-200">check_circle</span> Gestión del duelo</li>
+                <li className="flex items-center gap-2 text-sm font-medium"><span className="material-symbols-outlined text-lg text-accent-600">check_circle</span> Primeros Auxilios</li>
+                <li className="flex items-center gap-2 text-sm font-medium"><span className="material-symbols-outlined text-lg text-accent-600">check_circle</span> Soporte vital básico</li>
+                <li className="flex items-center gap-2 text-sm font-medium"><span className="material-symbols-outlined text-lg text-accent-600">check_circle</span> Gestión del duelo</li>
               </ul>
               <Link to="/catalog" className="text-bar-500 text-sm font-medium tracking-wide flex items-center gap-2 group-hover:translate-x-2 transition-transform">
                 Ver más programas <span className="material-symbols-outlined">arrow_forward</span>
               </Link>
             </div>
             <div className="group bg-white p-8 rounded-3xl shadow-sm border border-neutral-200/20 hover:shadow-md hover:border-bar-200/40 transition-all">
-              <div className="w-16 h-16 bg-bar-200/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-bar-200 group-hover:text-bar-900 transition-colors">
+              <div className="w-16 h-16 bg-bar-200/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-accent-500 group-hover:text-bar-900 transition-colors">
                 <span className="material-symbols-outlined text-3xl">clinical_notes</span>
               </div>
               <h3 className="text-2xl font-semibold text-bar-900 mb-4">Avanzados</h3>
               <p className="text-base text-neutral-600 mb-6 text-justify">Capacitación técnica de alto nivel para profesionales en ejercicio y especialistas.</p>
               <ul className="space-y-3 mb-8">
-                <li className="flex items-center gap-2 text-sm font-medium"><span className="material-symbols-outlined text-lg text-bar-500">check_circle</span> Soporte cardiovascular avanzado</li>
-                <li className="flex items-center gap-2 text-sm font-medium"><span className="material-symbols-outlined text-lg text-bar-500">check_circle</span> Central de esterilización</li>
-                <li className="flex items-center gap-2 text-sm font-medium"><span className="material-symbols-outlined text-lg text-bar-500">check_circle</span> Primeros Auxilios Psicologicos</li>
+                <li className="flex items-center gap-2 text-sm font-medium"><span className="material-symbols-outlined text-lg text-accent-600">check_circle</span> Soporte cardiovascular avanzado</li>
+                <li className="flex items-center gap-2 text-sm font-medium"><span className="material-symbols-outlined text-lg text-accent-600">check_circle</span> Central de esterilización</li>
+                <li className="flex items-center gap-2 text-sm font-medium"><span className="material-symbols-outlined text-lg text-accent-600">check_circle</span> Primeros Auxilios Psicologicos</li>
               </ul>
               <Link to="/catalog" className="text-bar-200 text-sm font-medium tracking-wide flex items-center gap-2 group-hover:translate-x-2 transition-transform">
                 Ver más programas <span className="material-symbols-outlined">arrow_forward</span>
@@ -200,9 +200,9 @@ export default function HomePage() {
               <h3 className="text-2xl font-semibold text-white mb-4">Diplomados</h3>
               <p className="text-base text-white/70 mb-6 text-justify">Programas extensivos con alta carga horaria y enfoque en competencias específicas.</p>
               <ul className="space-y-3 mb-8">
-                <li className="flex items-center gap-2 text-sm font-medium text-white/90"><span className="material-symbols-outlined text-lg text-bar-200">stars</span> Gerontologia y geriatria</li>
-                <li className="flex items-center gap-2 text-sm font-medium text-white/90"><span className="material-symbols-outlined text-lg text-bar-200">stars</span> Unidad Oncologica</li>
-                <li className="flex items-center gap-2 text-sm font-medium text-white/90"><span className="material-symbols-outlined text-lg text-bar-200">stars</span> Clinica de heridas</li>
+                <li className="flex items-center gap-2 text-sm font-medium text-white/90"><span className="material-symbols-outlined text-lg text-accent-400">stars</span> Gerontologia y geriatria</li>
+                <li className="flex items-center gap-2 text-sm font-medium text-white/90"><span className="material-symbols-outlined text-lg text-accent-400">stars</span> Unidad Oncologica</li>
+                <li className="flex items-center gap-2 text-sm font-medium text-white/90"><span className="material-symbols-outlined text-lg text-accent-400">stars</span> Clinica de heridas</li>
               </ul>
               <Link to="/catalog" className="text-white text-sm font-medium tracking-wide flex items-center gap-2 group-hover:translate-x-2 transition-transform">
                 Explorar diplomados <span className="material-symbols-outlined">arrow_forward</span>
@@ -250,7 +250,7 @@ export default function HomePage() {
         <section className="bg-bar-900 py-20 text-white">
           <div className="max-w-7xl mx-auto px-4 md:px-10">
             <div className="text-center mb-16">
-              <h2 className="text-3xl font-semibold tracking-tight">¿Por qué elegir InnovaSalud?</h2>
+              <h2 className="text-3xl font-semibold tracking-tight">¿Por qué elegir MediCenter?</h2>
               <p className="text-base text-white/60 mt-4">Formación virtual diseñada para impulsar tu crecimiento profesional con calidad, flexibilidad y confianza.</p>
             </div>
             <div className="grid grid-cols-2 lg:grid-cols-5 gap-8">
@@ -262,7 +262,7 @@ export default function HomePage() {
                 { icon: 'devices', title: '100% Virtual', desc: 'Estudia desde cualquier lugar y avanza a tu propio ritmo, sin horarios fijos.' },
               ].map((item) => (
                 <div key={item.title} className="text-center group">
-                  <div className="w-20 h-20 mx-auto bg-white/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-bar-200 transition-all duration-300">
+                  <div className="w-20 h-20 mx-auto bg-white/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-accent-500 transition-all duration-300">
                     <span className="material-symbols-outlined text-4xl group-hover:text-bar-900">{item.icon}</span>
                   </div>
                   <h4 className="text-xl font-semibold mb-2">{item.title}</h4>
@@ -285,7 +285,7 @@ export default function HomePage() {
               {faqs.map((faq, i) => {
                 const open = openIndex === i
                 return (
-                  <div key={i} className={`border border-neutral-200/30 rounded-2xl overflow-hidden transition-all duration-300 ${open ? 'bg-blue-50 border-bar-500/30' : ''}`}>
+                  <div key={i} className={`border border-neutral-200/30 rounded-2xl overflow-hidden transition-all duration-300 ${open ? 'bg-accent-50 border-bar-500/30' : ''}`}>
                     <button
                       onClick={() => setOpenIndex(open ? null : i)}
                       className="w-full flex justify-between items-center p-6 text-left hover:bg-content-50 transition-colors group"
@@ -342,7 +342,7 @@ export default function HomePage() {
                     className="flex items-center gap-6 group no-underline"
                   >
                     <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center shadow-sm group-hover:scale-110 transition-transform">
-                      <span className="material-symbols-outlined text-bar-200">call</span>
+                      <span className="material-symbols-outlined text-accent-500">call</span>
                     </div>
                     <div>
                       <p className="text-xs font-semibold tracking-wider text-neutral-600 uppercase">WhatsApp / Teléfono</p>
@@ -363,7 +363,7 @@ export default function HomePage() {
               <div className="bg-white p-10 rounded-3xl shadow-xl">
                 <form className="space-y-6" onSubmit={handleSubmit}>
                   {sent && (
-                    <div className="bg-bar-200/20 text-bar-900 px-4 py-3 rounded-xl text-sm font-medium text-center">
+                    <div className="bg-accent-500/20 text-bar-900 px-4 py-3 rounded-xl text-sm font-medium text-center">
                       Mensaje enviado correctamente. Te contactaremos pronto.
                     </div>
                   )}
@@ -404,27 +404,27 @@ export default function HomePage() {
         <div className="flex flex-col md:flex-row justify-between items-center w-full px-4 md:px-10 max-w-7xl mx-auto gap-4">
           <div className="flex flex-col items-center md:items-start gap-4">
             <div className="flex items-center gap-3">
-              <img src="/logovector.svg" alt="InnovaSalud" className="h-10 w-auto brightness-0 invert" />
-              <span className="text-2xl font-black text-white">InnovaSalud</span>
+              <img src="/logovector.svg" alt="MediCenter" className="h-10 w-auto brightness-0 invert" />
+              <span className="text-2xl font-black text-white">MediCenter</span>
             </div>
-            <p className="text-base text-white/70 text-center md:text-left">© 2024 InnovaSalud. Transformando la educación en salud.</p>
+            <p className="text-base text-white text-center md:text-left">© 2024 MediCenter. Transformando la educación en salud.</p>
           </div>
           <div className="flex flex-wrap justify-center gap-8">
-            <Link to="/privacy" className="text-xs font-semibold tracking-wider text-white/70 hover:text-white hover:underline transition-all">Privacidad</Link>
-            <Link to="/terms" className="text-xs font-semibold tracking-wider text-white/70 hover:text-white hover:underline transition-all">Términos de Servicio</Link>
-            <Link to="/faq" className="text-xs font-semibold tracking-wider text-white/70 hover:text-white hover:underline transition-all">Ayuda</Link>
-            <a href="#contact" className="text-xs font-semibold tracking-wider text-white/70 hover:text-white hover:underline transition-all">Contacto</a>
+            <Link to="/privacy" className="text-xs font-semibold tracking-wider text-white hover:text-white/80 hover:underline transition-all">Privacidad</Link>
+            <Link to="/terms" className="text-xs font-semibold tracking-wider text-white hover:text-white/80 hover:underline transition-all">Términos de Servicio</Link>
+            <Link to="/faq" className="text-xs font-semibold tracking-wider text-white hover:text-white/80 hover:underline transition-all">Ayuda</Link>
+            <a href="#contact" className="text-xs font-semibold tracking-wider text-white hover:text-white/80 hover:underline transition-all">Contacto</a>
           </div>
           <div className="flex gap-4">
             <button
               onClick={() => {
                 if (navigator.share) {
-                  navigator.share({ title: 'InnovaSalud', url: window.location.href })
+                  navigator.share({ title: 'MediCenter', url: window.location.href })
                 } else {
                   navigator.clipboard.writeText(window.location.href)
                 }
               }}
-              className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-bar-200 transition-colors cursor-pointer group"
+              className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent-500 transition-colors cursor-pointer group"
             >
               <span className="material-symbols-outlined text-white group-hover:text-bar-900">share</span>
             </button>
@@ -432,7 +432,7 @@ export default function HomePage() {
               href={`https://wa.me/${config.contactPhone.replace(/[^\d]/g, '')}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-bar-500 transition-colors cursor-pointer group"
+              className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-accent-500 transition-colors cursor-pointer group"
             >
               <span className="material-symbols-outlined text-white group-hover:text-bar-900">call</span>
             </a>

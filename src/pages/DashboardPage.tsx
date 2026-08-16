@@ -11,16 +11,16 @@ export default function DashboardPage() {
   const { data: stats, isLoading } = useDashboardStats({ enabled: !!isStaff })
 
   const statsCards = [
-    { label: 'Usuarios activos', value: stats?.total_users ?? null, icon: FaUsers, color: 'text-bar-600 bg-bar-50' },
-    { label: 'Total certificados', value: stats?.total_certificates ?? null, icon: FaAward, color: 'text-success-600 bg-success-50' },
-    { label: 'Cursos publicados', value: stats?.published_courses ?? null, icon: FaGraduationCap, color: 'text-warning-600 bg-warning-50' },
-    { label: 'Tipos de certificado', value: stats?.certificate_types ?? null, icon: FaFileAlt, color: 'text-info-600 bg-info-50' },
+    { label: 'Usuarios activos', value: stats?.total_users ?? null, icon: FaUsers, color: 'text-accent-600 bg-accent-50' },
+    { label: 'Total certificados', value: stats?.total_certificates ?? null, icon: FaAward, color: 'text-accent-600 bg-accent-50' },
+    { label: 'Cursos publicados', value: stats?.published_courses ?? null, icon: FaGraduationCap, color: 'text-accent-600 bg-accent-50' },
+    { label: 'Tipos de certificado', value: stats?.certificate_types ?? null, icon: FaFileAlt, color: 'text-accent-600 bg-accent-50' },
   ]
 
   const certStatusCards = [
-    { label: 'Activos', value: stats?.active_certificates ?? null, icon: FaCheckCircle, color: 'text-success-600 bg-success-50' },
-    { label: 'Expirados', value: stats?.expired_certificates ?? null, icon: FaClock, color: 'text-warning-600 bg-warning-50' },
-    { label: 'Revocados', value: stats?.revoked_certificates ?? null, icon: FaTimesCircle, color: 'text-danger-600 bg-danger-50' },
+    { label: 'Activos', value: stats?.active_certificates ?? null, icon: FaCheckCircle, color: 'text-accent-600 bg-accent-50' },
+    { label: 'Expirados', value: stats?.expired_certificates ?? null, icon: FaClock, color: 'text-accent-600 bg-accent-50' },
+    { label: 'Revocados', value: stats?.revoked_certificates ?? null, icon: FaTimesCircle, color: 'text-accent-600 bg-accent-50' },
   ]
 
   return (
@@ -30,7 +30,7 @@ export default function DashboardPage() {
           Hola, {user?.name || 'Usuario'}
         </h1>
         <p className="mt-1 small text-muted">
-          Panel principal de la plataforma InnovaSalud
+          Panel principal de la plataforma MediCenter
         </p>
       </div>
 
@@ -96,7 +96,7 @@ export default function DashboardPage() {
           <div className="position-sticky" style={{ top: '1rem' }}>
             <img
               src="/panel-bg.jpg"
-              alt="Panel InnovaSalud"
+              alt="Panel MediCenter"
               className="w-100 rounded-3 border shadow-sm"
             />
           </div>

@@ -50,9 +50,9 @@ export default function SidebarDrawer({ open, onClose }: SidebarDrawerProps) {
         open ? 'translate-x-0' : 'translate-x-full'
       }`}
     >
-      <div className="flex items-center justify-between border-b border-bar-200 bg-bar-500 px-4 py-3">
-        <img src="/logo.png" alt="InnovaSalud" className="h-20 w-auto" />
-        <button onClick={onClose} className="rounded-lg p-1.5 text-white hover:bg-bar-400 transition-colors">
+      <div className="flex items-center justify-between border-b border-bar-600 bg-bar-700 px-4 py-3">
+        <img src="/logo.png" alt="MediCenter" className="h-20 w-auto" />
+        <button onClick={onClose} className="rounded-lg p-1.5 text-white hover:bg-bar-600 transition-colors">
           <FaTimes className="h-5 w-5" />
         </button>
       </div>
@@ -81,7 +81,7 @@ export default function SidebarDrawer({ open, onClose }: SidebarDrawerProps) {
 
       <div className="border-t border-neutral-200 px-4 py-4">
         <div className="mb-3 flex items-center gap-3 px-2">
-          <div className="flex h-8 w-8 items-center justify-center rounded-full bg-bar-300 text-sm font-medium text-white">
+          <div className="flex h-8 w-8 items-center justify-center rounded-full bg-bar-600 text-sm font-medium text-white">
             {user?.name?.charAt(0)?.toUpperCase() || 'U'}
           </div>
           <div className="min-w-0 flex-1">

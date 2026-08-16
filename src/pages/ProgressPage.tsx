@@ -114,7 +114,7 @@ export default function ProgressPage() {
           <div className="p-4">
             <div className="d-flex align-items-center justify-content-between mb-2">
               <span className="small fw-semibold text-neutral-700">Progreso global</span>
-              <span className="small fw-bold" style={{ color: progress.overall_percent >= 100 ? '#83CA18' : undefined }}>
+              <span className="small fw-bold" style={{ color: progress.overall_percent >= 100 ? '#D2D82A' : undefined }}>
                 {Math.round(progress.overall_percent)}%
               </span>
             </div>
@@ -123,7 +123,7 @@ export default function ProgressPage() {
                 className="progress-bar"
                 style={{
                   width: `${progress.overall_percent}%`,
-                  backgroundColor: progress.overall_percent >= 100 ? '#83CA18' : undefined,
+                  backgroundColor: progress.overall_percent >= 100 ? '#D2D82A' : undefined,
                 }}
               />
             </div>
@@ -153,12 +153,12 @@ export default function ProgressPage() {
                         className="progress-bar"
                         style={{
                           width: `${course.progress_percent}%`,
-                          backgroundColor: course.progress_percent >= 100 ? '#83CA18' : undefined,
+                          backgroundColor: course.progress_percent >= 100 ? '#D2D82A' : undefined,
                         }}
                       />
                     </div>
                   </div>
-                  <span className="small fw-bold" style={{ color: course.progress_percent >= 100 ? '#83CA18' : undefined }}>
+                  <span className="small fw-bold" style={{ color: course.progress_percent >= 100 ? '#D2D82A' : undefined }}>
                     {Math.round(course.progress_percent)}%
                   </span>
                 </div>

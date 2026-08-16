@@ -44,16 +44,16 @@ export default function Topbar({ onMenuClick }: TopbarProps) {
   })
 
   return (
-    <header className="sticky top-0 z-30 flex h-16 items-center justify-between border-b border-bar-200 bg-bar-500 px-4 shadow-sm">
+    <header className="sticky top-0 z-30 flex h-16 items-center justify-between border-b border-bar-600 bg-bar-700 px-4 shadow-sm">
       <div className="flex items-center gap-3">
         <button
           onClick={onMenuClick}
-          className="flex items-center justify-center rounded-lg p-2 text-white hover:bg-bar-400 transition-colors xl:hidden"
+          className="flex items-center justify-center rounded-lg p-2 text-white hover:bg-bar-600 transition-colors xl:hidden"
         >
           <FaBars className="h-5 w-5" />
         </button>
         <Link to="/">
-          <img src="/logo.png" alt="InnovaSalud" className="h-23 w-auto object-contain" />
+          <img src="/logo.png" alt="MediCenter" className="h-20 w-auto object-contain" />
         </Link>
       </div>
 
@@ -67,8 +67,8 @@ export default function Topbar({ onMenuClick }: TopbarProps) {
               to={item.path}
               className={`flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-sm font-medium whitespace-nowrap transition-colors ${
                 active
-                  ? 'bg-bar-400 text-white shadow-sm'
-                  : 'text-white hover:bg-bar-400/70 hover:text-white'
+                  ? 'bg-bar-600 text-white shadow-sm'
+                  : 'text-white hover:bg-bar-600/70 hover:text-white'
               }`}
             >
               <Icon className="h-4 w-4" />
@@ -79,8 +79,8 @@ export default function Topbar({ onMenuClick }: TopbarProps) {
       </nav>
 
       <div className="flex items-center gap-1">
-        <div className="flex items-center gap-1.5 pe-2 border-r border-bar-400">
-          <div className="flex h-7 w-7 items-center justify-center rounded-full bg-bar-300 text-xs font-bold text-white shrink-0">
+        <div className="flex items-center gap-1.5 pe-2 border-r border-bar-600">
+          <div className="flex h-7 w-7 items-center justify-center rounded-full bg-bar-600 text-xs font-bold text-white shrink-0">
             {user?.name?.charAt(0)?.toUpperCase() || 'U'}
           </div>
           <div className="hidden lg:block leading-tight">
@@ -90,7 +90,7 @@ export default function Topbar({ onMenuClick }: TopbarProps) {
         </div>
         <button
           onClick={() => { logout(); navigate('/login') }}
-          className="flex items-center gap-1 rounded-lg px-2 py-1.5 text-xs font-medium text-bar-100 hover:bg-bar-400 hover:text-white transition-colors"
+          className="flex items-center gap-1 rounded-lg px-2 py-1.5 text-xs font-medium text-bar-100 hover:bg-bar-600 hover:text-white transition-colors"
           title="Cerrar sesión"
         >
           <FaSignOutAlt className="h-3.5 w-3.5" />
