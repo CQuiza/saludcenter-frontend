@@ -4,10 +4,10 @@ import { config } from '../config'
 
 
 const faqs = [
-  { q: '¿Los certificados tienen validez?', a: 'Sí. Nuestros certificados acreditan la participación y aprobación del curso realizado. Cada certificado puede verificarse mediante un código QR, garantizando su autenticidad y facilitando su validación.' },
-  { q: '¿Cómo recibo mi certificado?', a: 'Una vez confirmemos tu inscripción y registremos correctamente tus datos en nuestro sistema, recibirás tu certificado de manera inmediata en formato digital, listo para descargar y compartir cuando lo necesites.' },
-  { q: '¿Los cursos son completamente virtuales?', a: 'Sí. Todos nuestros cursos y diplomados se desarrollan en modalidad 100 % virtual, permitiéndote estudiar desde cualquier lugar y avanzar según tu disponibilidad.' },
-  { q: '¿Debo cumplir un horario?', a: 'No. Puedes acceder a la plataforma las 24 horas del día, los 7 días de la semana, y estudiar a tu propio ritmo.' },
+  { q: '¿Qué tipo de institución es Medicenter Educación Virtual?', a: 'Somos una institución de educación informal enfocada en la capacitación y actualización del talento humano en salud.' },
+  { q: '¿Los cursos son virtuales?', a: 'Sí. Nuestros programas se desarrollan en modalidad virtual, con acceso flexible desde cualquier lugar.' },
+  { q: '¿A quiénes están dirigidos?', a: 'A profesionales y demás integrantes del talento humano en salud, de acuerdo con los requisitos de cada programa.' },
+  { q: '¿Los cursos tienen una duración definida?', a: 'Sí. Cada programa cuenta con una intensidad horaria y condiciones específicas, detalladas en la información del curso.' },
 ]
 
 export default function HomePage() {
@@ -44,6 +44,7 @@ export default function HomePage() {
           <div className="hidden md:flex items-center gap-8">
             <Link to="/search" className="text-sm font-medium tracking-wide text-white hover:text-white/80 transition-colors">Verificar certificado</Link>
             <Link to="/catalog" className="text-sm font-medium tracking-wide text-white hover:text-white/80 transition-colors">Catálogo</Link>
+            <Link to="/terms" className="text-sm font-medium tracking-wide text-white hover:text-white/80 transition-colors">Legalidad</Link>
             <Link to="/login" className="bg-accent-500 text-white px-6 py-2.5 rounded-full text-sm font-bold tracking-wide hover:bg-accent-600 transition-all scale-95 active:scale-90">
               Iniciar sesión
             </Link>
@@ -56,6 +57,7 @@ export default function HomePage() {
           <div className="md:hidden border-t border-white/10 bg-bar-700 px-4 py-6 space-y-4">
             <Link to="/search" onClick={() => setMobileMenuOpen(false)} className="block text-sm font-medium text-white hover:text-white/80">Verificar certificado</Link>
             <Link to="/catalog" onClick={() => setMobileMenuOpen(false)} className="block text-sm font-medium text-white hover:text-white/80">Catálogo</Link>
+            <Link to="/terms" onClick={() => setMobileMenuOpen(false)} className="block text-sm font-medium text-white hover:text-white/80">Legalidad</Link>
             <Link to="/login" onClick={() => setMobileMenuOpen(false)} className="block text-center bg-accent-500 text-white px-6 py-2.5 rounded-full text-sm font-bold">Iniciar sesión</Link>
           </div>
         )}
@@ -211,6 +213,22 @@ export default function HomePage() {
           </div>
         </section>
 
+        <section className="py-20 bg-white">
+          <div className="max-w-3xl mx-auto px-4 md:px-10">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-semibold text-bar-900 tracking-tight">Quienes Somos</h2>
+            </div>
+            <div className="bg-content-50 p-8 rounded-2xl shadow-sm border-l-4 border-bar-500">
+              <p className="text-base text-neutral-600 leading-relaxed text-justify">
+                Medicenter Educación Virtual es una institución de educación informal enfocada en la formación y actualización del talento humano en salud. Ofrecemos programas de capacitación flexibles, accesibles y de calidad, desarrollados bajo una metodología virtual que facilita el aprendizaje continuo y el fortalecimiento de competencias profesionales.
+              </p>
+              <p className="text-base text-neutral-600 leading-relaxed text-justify mt-4">
+                Nuestra oferta académica responde a las necesidades del sector salud, con contenidos pertinentes y aplicables al entorno laboral, promoviendo una atención más segura, humanizada y de calidad. Trabajamos con compromiso, responsabilidad y mejora continua para contribuir al crecimiento profesional del talento humano en salud.
+              </p>
+            </div>
+          </div>
+        </section>
+
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 md:px-10">
             <div className="grid lg:grid-cols-2 gap-8 items-center">
@@ -220,7 +238,9 @@ export default function HomePage() {
                     <span className="material-symbols-outlined">rocket_launch</span> Nuestra Misión
                   </h3>
                   <p className="text-base text-neutral-600 leading-relaxed text-justify">
-                    Brindar formación virtual de excelencia para el talento humano en salud, mediante programas académicos innovadores, flexibles y actualizados que impulsen el desarrollo profesional, el fortalecimiento de competencias y la mejora continua de la atención en salud.
+                    En Medicenter Educación Virtual tenemos como propósito contribuir al fortalecimiento de las competencias y conocimientos del talento humano en salud, mediante programas de educación informal desarrollados bajo principios de calidad, actualización y responsabilidad.
+                    <br />
+                    Brindamos formación accesible, pertinente y orientada a las necesidades del sector salud, apoyándonos en herramientas virtuales que facilitan el aprendizaje y permiten a nuestros participantes actualizar sus conocimientos y fortalecer sus capacidades para el ejercicio de sus funciones.
                   </p>
                 </div>
                 <div className="bg-white p-8 rounded-2xl shadow-sm border-l-4 border-bar-200 translate-x-4 md:translate-x-8">
@@ -228,7 +248,9 @@ export default function HomePage() {
                     <span className="material-symbols-outlined">visibility</span> Nuestra Visión
                   </h3>
                   <p className="text-base text-neutral-600 leading-relaxed text-justify">
-                    Consolidarnos como el referente nacional en educación virtual para el sector salud, ofreciendo experiencias de aprendizaje innovadoras, tecnología de vanguardia y contenidos de alta calidad que contribuyan al crecimiento profesional y al fortalecimiento del sistema de salud colombiano.
+                    Medicenter Educación Virtual busca consolidarse como una institución de educación informal reconocida a nivel nacional por la calidad, confiabilidad e innovación de sus procesos de formación dirigidos al talento humano en salud.
+                    <br />
+                    Nuestro propósito es crecer de manera sostenible, ampliar continuamente nuestra oferta académica y generar un impacto positivo en el desarrollo del talento humano en salud, contribuyendo desde la educación al fortalecimiento de una atención segura, humanizada y centrada en las personas.
                   </p>
                 </div>
               </div>
@@ -247,19 +269,36 @@ export default function HomePage() {
           </div>
         </section>
 
+        <section className="py-20 bg-white">
+          <div className="max-w-3xl mx-auto px-4 md:px-10">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-semibold text-bar-900 tracking-tight">Nuestro compromiso con la formación</h2>
+            </div>
+            <div className="bg-content-50 p-8 rounded-2xl shadow-sm border-l-4 border-bar-200">
+              <p className="text-base text-neutral-600 leading-relaxed text-justify">
+                En Medicenter Educación Virtual creemos que la formación del talento humano en salud debe ser continua, pertinente y accesible. Por eso, ofrecemos experiencias de aprendizaje que permiten actualizar conocimientos, fortalecer competencias y responder a los desafíos del sector salud.
+              </p>
+              <p className="text-base text-neutral-600 leading-relaxed text-justify mt-4">
+                Nuestro compromiso es brindar contenidos de calidad y una plataforma virtual accesible, trabajando cada día para ser un aliado confiable en la formación continua del talento humano en salud.
+              </p>
+            </div>
+          </div>
+        </section>
+
         <section className="bg-bar-900 py-20 text-white">
           <div className="max-w-7xl mx-auto px-4 md:px-10">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-semibold tracking-tight">¿Por qué elegir MediCenter?</h2>
               <p className="text-base text-white/60 mt-4">Formación virtual diseñada para impulsar tu crecimiento profesional con calidad, flexibilidad y confianza.</p>
             </div>
-            <div className="grid grid-cols-2 lg:grid-cols-5 gap-8">
+            <div className="grid grid-cols-2 lg:grid-cols-3 gap-8">
               {[
-                { icon: 'verified', title: 'Certificación inmediata', desc: 'Obtén y descarga tu certificado de forma inmediata.' },
-                { icon: 'qr_code', title: 'Verificación QR', desc: 'Verifica la autenticidad de tu certificado de manera rápida y segura mediante código QR.' },
-                { icon: 'gavel', title: 'Cumplimiento Normativo', desc: 'Programas desarrollados conforme a la normativa vigente y orientados al fortalecimiento de las competencias del talento humano en salud.' },
-                { icon: 'schedule', title: 'Acceso 24/7', desc: 'Accede a la plataforma en cualquier momento, desde cualquier dispositivo.' },
-                { icon: 'devices', title: '100% Virtual', desc: 'Estudia desde cualquier lugar y avanza a tu propio ritmo, sin horarios fijos.' },
+                { icon: 'medical_services', title: 'Formación especializada en salud', desc: 'Programas enfocados en las necesidades de actualización del talento humano en salud.' },
+                { icon: 'devices', title: 'Modalidad 100% virtual', desc: 'Estudia de forma flexible, accesible y desde cualquier lugar.' },
+                { icon: 'menu_book', title: 'Contenidos pertinentes y actualizados', desc: 'Formación práctica y aplicable a las necesidades del entorno laboral.' },
+                { icon: 'support_agent', title: 'Acompañamiento durante tu formación', desc: 'Orientación y apoyo para que tengas una experiencia de aprendizaje clara y efectiva.' },
+                { icon: 'verified', title: 'Compromiso con la calidad', desc: 'Trabajamos en la mejora continua para ofrecer procesos de formación confiables y de calidad.' },
+                { icon: 'trending_up', title: 'Impulsa tu desarrollo profesional', desc: 'Fortalece tus conocimientos y competencias para seguir creciendo en el sector salud.' },
               ].map((item) => (
                 <div key={item.title} className="text-center group">
                   <div className="w-20 h-20 mx-auto bg-white/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-accent-500 transition-all duration-300">
@@ -296,9 +335,9 @@ export default function HomePage() {
                       </span>
                     </button>
                     <div className={`overflow-hidden transition-all duration-500 ${open ? 'max-h-[500px]' : 'max-h-0'}`}>
-                        <div className="p-6 text-base text-neutral-600 leading-relaxed text-justify">
-                          {faq.a}
-                        </div>
+                      <div className="p-6 text-base text-neutral-600 leading-relaxed text-justify">
+                        {faq.a}
+                      </div>
                     </div>
                   </div>
                 )
@@ -314,6 +353,22 @@ export default function HomePage() {
                 Ver más
                 <span className="material-symbols-outlined text-lg">arrow_forward</span>
               </Link>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-20 bg-content-50">
+          <div className="max-w-3xl mx-auto px-4 md:px-10">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-semibold text-bar-900 tracking-tight">Marco normativo</h2>
+            </div>
+            <div className="bg-white p-8 rounded-2xl shadow-sm border-l-4 border-bar-500">
+              <p className="text-base text-neutral-600 leading-relaxed text-justify">
+                En Medicenter Educación Virtual desarrollamos nuestros programas de formación bajo el marco normativo aplicable a la educación informal y a la capacitación del talento humano en salud en Colombia. En este sentido, nuestros cursos se estructuran de acuerdo con lo establecido en el artículo 2.6.6.8 del Decreto 1075 de 2015 del Ministerio de Educación Nacional y la Resolución 3100 de 2019 del Ministerio de Salud y Protección Social, considerando los lineamientos relacionados con la formación, actualización y fortalecimiento de las competencias necesarias para el desempeño en el sector salud.
+              </p>
+              <p className="text-base text-neutral-600 leading-relaxed text-justify mt-4">
+                Cada programa está diseñado para brindar una experiencia clara, confiable y aplicable al entorno profesional, promoviendo la actualización continua y el fortalecimiento del talento humano en salud. Trabajamos con calidad, transparencia y responsabilidad, convirtiendo cada proceso de formación en una oportunidad de crecimiento profesional.
+              </p>
             </div>
           </div>
         </section>

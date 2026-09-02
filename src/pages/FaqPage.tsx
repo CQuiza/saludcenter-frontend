@@ -4,16 +4,13 @@ import { FaChevronDown, FaChevronRight } from 'react-icons/fa'
 import PublicFooter from '../components/organisms/PublicFooter'
 
 const faqs = [
-  { q: '¿Los certificados tienen validez?', a: 'Sí. Nuestros certificados acreditan la participación y aprobación del curso realizado. Cada certificado puede verificarse mediante un código QR, garantizando su autenticidad y facilitando su validación.' },
-  { q: '¿Cómo recibo mi certificado?', a: 'Una vez confirmemos tu inscripción y registremos correctamente tus datos en nuestro sistema, recibirás tu certificado de manera inmediata en formato digital, listo para descargar y compartir cuando lo necesites.' },
-  { q: '¿Los cursos son completamente virtuales?', a: 'Sí. Todos nuestros cursos y diplomados se desarrollan en modalidad 100 % virtual, permitiéndote estudiar desde cualquier lugar y avanzar según tu disponibilidad.' },
-  { q: '¿Debo cumplir un horario?', a: 'No. Puedes acceder a la plataforma las 24 horas del día, los 7 días de la semana, y estudiar a tu propio ritmo.' },
-  { q: '¿Cuánto tiempo tengo para realizar el curso?', a: 'Cada curso cuenta con un tiempo de acceso específico, el cual se informa antes de realizar la inscripción.' },
-  { q: '¿Qué métodos de pago aceptan?', a: 'Puedes realizar el pago mediante transferencia bancaria a nuestras cuentas autorizadas. Una vez recibido el comprobante y validado el pago, procederemos con tu proceso de inscripción.' },
-  { q: '¿Necesito experiencia previa?', a: 'Depende del programa. Muchos de nuestros cursos están dirigidos a estudiantes y profesionales del sector salud, mientras que otros requieren conocimientos previos específicos.' },
-  { q: '¿Puedo acceder desde mi celular?', a: 'Sí. Nuestra plataforma es compatible con computadores, tabletas y teléfonos móviles para que estudies desde cualquier dispositivo con conexión a internet.' },
-  { q: '¿Qué pasa si tengo dudas durante el curso?', a: 'Nuestro equipo de soporte estará disponible para orientarte y ayudarte durante tu proceso de formación.' },
-  { q: '¿Cómo puedo comunicarme con ustedes?', a: 'Puedes contactarnos a través de WhatsApp, correo electrónico o mediante el formulario de contacto disponible en nuestro sitio web.' },
+  { q: '¿Qué tipo de institución es Medicenter Educación Virtual?', a: 'Somos una institución de educación informal enfocada en la capacitación y actualización del talento humano en salud.' },
+  { q: '¿Los cursos son virtuales?', a: 'Sí. Nuestros programas se desarrollan en modalidad virtual, con acceso flexible desde cualquier lugar.' },
+  { q: '¿A quiénes están dirigidos?', a: 'A profesionales y demás integrantes del talento humano en salud, de acuerdo con los requisitos de cada programa.' },
+  { q: '¿Los cursos tienen una duración definida?', a: 'Sí. Cada programa cuenta con una intensidad horaria y condiciones específicas, detalladas en la información del curso.' },
+  { q: '¿Se entrega certificado?', a: 'Sí. Una vez confirmado el pago, recibirás acceso a nuestra plataforma para consultar y descargar tu certificado en PDF. Cada certificado cuenta con código QR para verificar su autenticidad.' },
+  { q: '¿Cómo puedo inscribirme?', a: 'Consulta nuestra oferta académica y comunícate con nuestro equipo para conocer disponibilidad, inscripción y formas de pago.' },
+  { q: '¿Necesito ser profesional de la salud?', a: 'Nuestros cursos están dirigidos al talento humano en salud que cumpla con el perfil requerido para cada programa. Te recomendamos verificar los requisitos antes de realizar la inscripción.' },
 ]
 
 export default function FaqPage() {
