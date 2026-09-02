@@ -26,7 +26,7 @@ export default function TermsPage() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-bar-900 text-white px-6 py-3 rounded-xl font-semibold hover:bg-bar-700 transition-colors"
             >
-              Confirmar esta infromación
+              Confirmar esta información
               <span className="material-symbols-outlined">open_in_new</span>
             </a>
           </div>
