@@ -14,6 +14,9 @@ import type { CourseProgressSummary, ModuleProgressItem, User } from '../types'
 import { useNavigate } from 'react-router-dom'
 
 function isModuleComplete(mod: ModuleProgressItem): boolean {
+  // El backend ya calcula el estado del módulo; se mantiene el fallback para
+  // respuestas antiguas en caché que no traían el campo `completed`.
+  if (typeof mod.completed === 'boolean') return mod.completed
   const assessmentOk = mod.total_assessment_questions === 0 || mod.passed
   const tasksOk = mod.total_tasks === 0 || mod.submitted_tasks === mod.total_tasks
   return assessmentOk && tasksOk
@@ -55,6 +58,7 @@ export default function ProgressPage() {
     try {
       await taskSubmissionService.downloadFile(task.submission_id, task.original_filename ?? undefined)
     } catch {
+      // El servicio de descarga notifica el error; aquí solo se restaura el estado.
     } finally {
       setDownloading(null)
     }

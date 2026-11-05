@@ -69,6 +69,7 @@ export interface ModuleProgressItem {
   attempts_count: number
   last_score: number | null
   passed: boolean
+  completed?: boolean
   total_tasks: number
   submitted_tasks: number
   tasks: TaskProgressItem[]
